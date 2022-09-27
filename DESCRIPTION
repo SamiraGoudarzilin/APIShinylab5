@@ -1,0 +1,11 @@
+Package: APIShinylab5
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Samira", "Goudarzi", , "Samira.goudarzi@gmail.com", role = c("aut", "cre"))
+    person("Fatemeh", "Sharifiasl", , "sharifiasl.fateme@yahoo.com", role = c("aut", "cre"))
+Description: Creating a package to connect to a web API using RShiny application.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
