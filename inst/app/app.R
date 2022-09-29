@@ -10,13 +10,13 @@
 library(shiny)
 library(tidyverse)
 
-# Define UI for application that draws a histogram
+# Define UI for application that draws a line graph
 ui <- fluidPage(
 
     # Application title
     titlePanel("Monthly Salary according Gender Data"),
 
-    # Sidebar with a slider input for number of bins 
+    
     sidebarLayout(
         sidebarPanel(
             selectInput("gen",

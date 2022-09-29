@@ -1,0 +1,21 @@
+---
+title: "Report on the amount of monthly salary between 2008 to 2021"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Report on the amount of monthly salary between 2008 to 2021}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(APIShinylab5)
+
+
+```

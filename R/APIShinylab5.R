@@ -1,9 +1,17 @@
-install.packages(c("httr", "jsonlite"))
-library("httr")
-library("jsonlite")
-library("dplyr")
-library("ggplot2")
+# install.packages(c("httr", "jsonlite"))
+# library("httr")
+# library("jsonlite")
+# library("dplyr")
+# library("ggplot2")
 
+#' Title
+#'
+#' @return
+#' @export
+#' @import httr
+#' @import jsonlite
+#'
+#' @examples
 koladaapi<- function(){
   url <- "https://api.kolada.se/v2/data/kpi/N00053/municipality/1860"
   r <- httr::GET(url)
