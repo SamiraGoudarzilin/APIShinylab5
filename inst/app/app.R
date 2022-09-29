@@ -73,9 +73,12 @@ server <- function(input, output) {
   #colnames(df) <- c('year','gender','value')
 
       output$line <- renderPlot({
-      g <- reactive({input$gen})
-      gender <- koladaapi()
-      ggplot2::ggplot(gender, aes(x = year, y = value )) +  geom_line() + geom_point(size = 4, shape = 21, fill = "white")
+      #g <- reactive({input$gen}) don't use reactive for simple plots
+      dataframe_plot <- koladaapi()
+      genderplot=dataframe_plot[dataframe_plot$gender==input$gen,]
+      year_axis=unique(dataframe_plot[["year"]])
+      ggplot2::ggplot(genderplot, aes(x = year, y = value )) +  geom_line() +
+      geom_point(size = 4, shape = 21, fill = "white") 
     })
 }
 
