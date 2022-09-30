@@ -4,9 +4,9 @@
 # library("dplyr")
 # library("ggplot2")
 
-#' Title
+#' A function to get the URL of kolada.se KPIs
 #'
-#' @return
+#' @return a data frame of 3 columns of year,gender and value(salary)
 #' @export
 #' @import httr
 #' @import jsonlite
