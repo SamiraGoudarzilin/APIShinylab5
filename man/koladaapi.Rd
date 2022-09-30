@@ -2,10 +2,13 @@
 % Please edit documentation in R/APIShinylab5.R
 \name{koladaapi}
 \alias{koladaapi}
-\title{Title}
+\title{A function to get the URL of kolada.se KPIs}
 \usage{
 koladaapi()
 }
+\value{
+a data frame of 3 columns of year,gender and value(salary)
+}
 \description{
-Title
+A function to get the URL of kolada.se KPIs
 }

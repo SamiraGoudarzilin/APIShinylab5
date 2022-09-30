@@ -16,3 +16,4 @@ Suggests:
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 Depends: httr, jsonlite 
+Imports: ggplot2, shiny

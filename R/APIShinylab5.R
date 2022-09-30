@@ -9,9 +9,8 @@
 #' @return a data frame of 3 columns of year,gender and value(salary)
 #' @export
 #' @import httr
+#' @importFrom utils str
 #' @import jsonlite
-#'
-#' @examples
 koladaapi<- function(){
   url <- "https://api.kolada.se/v2/data/kpi/N00053/municipality/1860"
   r <- httr::GET(url)

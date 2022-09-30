@@ -43,8 +43,9 @@ server <- function(input, output) {
       dataframe_plot <- koladaapi()
       genderplot=dataframe_plot[dataframe_plot$gender==input$gen,]
       year_axis=unique(dataframe_plot[["year"]])
-      ggplot2::ggplot(genderplot, aes(x = year, y = value )) +  geom_line() +
-      geom_point(size = 4, shape = 21, fill = "white") 
+      ggplot2::ggplot(genderplot, ggplot2::aes(x = year, y = value )) +  #
+        ggplot2::geom_line() +
+        ggplot2::geom_point(size = 4, shape = 21, fill = "white") 
     })
 }
 

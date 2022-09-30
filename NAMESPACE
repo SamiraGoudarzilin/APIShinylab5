@@ -3,3 +3,4 @@
 export(koladaapi)
 import(httr)
 import(jsonlite)
+importFrom(utils,str)
