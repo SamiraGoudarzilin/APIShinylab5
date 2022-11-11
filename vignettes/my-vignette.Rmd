@@ -19,40 +19,4 @@ Introduction:
 *This package includes a function that calls Kolada.se APIs of staff monthly salary between 2088 and 2021 .
 Also there is a shiny App that creats a line graph which shows years on x axis and salary on y-axis.User can choos "F" as male, "k" as female and "T" as total number of male and female to see the line plot.*
 
-```{r output of APP, echo=TRUE}
-library(shiny)
-library(tidyverse)
-
-ui <- fluidPage(
-
-    titlePanel("Monthly Salary according Gender Data"),
-    sidebarLayout(
-        sidebarPanel(
-            selectInput("gen",
-                        "select Gender:",
-                        choices = c("K","M","T"),
-                        selected = "K")
-        ),
-
-        mainPanel(
-           plotOutput("line")
-        )
-    )
-)
-
-server <- function(input, output) {
- 
-      output$line <- renderPlot({
-      #g <- reactive({input$gen}) don't use reactive for simple plots
-      dataframe_plot <- koladaapi()
-      genderplot=dataframe_plot[dataframe_plot$gender==input$gen,]
-      year_axis=unique(dataframe_plot[["year"]])
-      ggplot2::ggplot(genderplot, aes(x = year, y = value )) +  geom_line() +
-      geom_point(size = 4, shape = 21, fill = "white") 
-    })
-}
-
-# Run the application 
-shinyApp(ui = ui, server = server)
-```
 
