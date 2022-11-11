@@ -8,7 +8,7 @@
 #
 
 library(shiny)
-library(tidyverse)
+
 
 # Define UI for application that draws a line graph
 ui <- fluidPage(
